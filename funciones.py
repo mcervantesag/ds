@@ -1,38 +1,21 @@
 #bibliotecas
-import sys
-import warnings
-import pathlib
-from termcolor import colored
-#bibliotecas para manejo de datos
-import pandas as pd
-import numpy as np
-from scipy import stats
 import re
 import unicodedata
-import nltk
-import unicodedata
-from random import sample
-from textblob import TextBlob
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.impute import SimpleImputer
-from sklearn.metrics import r2_score,mean_absolute_error,mean_squared_error
-from category_encoders import TargetEncoder
-from unidecode import unidecode
-from nltk.corpus import stopwords
-from nltk import FreqDist
-from statsmodels.stats.outliers_influence import variance_inflation_factor
-#bibliotecas para graficar
-import plotly
-import plotly.graph_objects as go
-import plotly.express as px
+
 import cufflinks as cf
-import stylecloud
-from PIL import Image
-from plotly.offline import plot,iplot
+import numpy as np
+# bibliotecas para manejo de datos
+import pandas as pd
+# bibliotecas para graficar
+import plotly.graph_objects as go
+from scipy import stats
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from termcolor import colored
+
 pd.options.plotting.backend = "plotly"
 cf.go_offline()
-pd.set_option("display.max_columns",200)
-import itertools
+pd.set_option("display.max_columns", 200)
 
 def reEtiquetaVars(df,tipo,feats):
 	feats_new=[tipo + "_"+x.lower() for x in feats]
